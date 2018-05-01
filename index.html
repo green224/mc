@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
@@ -9,7 +9,17 @@
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/output.json");
     </script>
   </head>
-  <body>
+  <body style="font-size:10px;">
     <div id="gameContainer" style="width: 640px; height: 360px; margin: auto"></div>
+    <p>
+    	視点操作<br/>
+    	左ドラッグ：平行移動<br/>
+    	右ドラッグ：回転
+    </p>
+    <p>
+    	ボクセル操作<br/>
+    	Ctrl+左ドラッグ：盛る<br/>
+    	Ctrl+右ドラッグ：削る
+    </p>
   </body>
 </html>
