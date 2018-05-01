@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Vojo",
+"dataUrl": "output.data.unityweb",
+"asmCodeUrl": "output.asm.code.unityweb",
+"asmMemoryUrl": "output.asm.memory.unityweb",
+"asmFrameworkUrl": "output.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#828080"
+}
