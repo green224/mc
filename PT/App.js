@@ -486,10 +486,10 @@ function lengthBytesUTF8(str) {
 var GLOBAL_BASE = 1024,
     TOTAL_STACK = 5242880,
     STATIC_BASE = 1024,
-    STACK_BASE = 6325824,
+    STACK_BASE = 6323696,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 1082944
-    , DYNAMICTOP_PTR = 1082768;
+    STACK_MAX = 1080816
+    , DYNAMICTOP_PTR = 1080640;
     ;
 
 
@@ -504,15 +504,15 @@ var buffer = wasmMemory.buffer;
 
 
 var wasmTable = new WebAssembly.Table({
-  'initial': 6227,
-  'maximum': 6227 + 0,
+  'initial': 6219,
+  'maximum': 6219 + 0,
   'element': 'anyfunc'
 });
 
 
 var WASM_PAGE_SIZE = 65536;
 assert(STACK_BASE % 16 === 0, 'stack must start aligned to 16 bytes, STACK_BASE==' + STACK_BASE);
-assert((6325824) % 16 === 0, 'heap must start aligned to 16 bytes, DYNAMIC_BASE==' + 6325824);
+assert((6323696) % 16 === 0, 'heap must start aligned to 16 bytes, DYNAMIC_BASE==' + 6323696);
 assert(67108864 >= TOTAL_STACK, 'INITIAL_MEMORY should be larger than TOTAL_STACK, was ' + 67108864 + '! (TOTAL_STACK=' + TOTAL_STACK + ')');
 assert(67108864 % WASM_PAGE_SIZE === 0);
 assert(2147483648 % WASM_PAGE_SIZE == 0);
@@ -538,7 +538,7 @@ updateGlobalBufferAndViews(buffer);
 
 
 
-  HEAP32[DYNAMICTOP_PTR>>2] = 6325824;
+  HEAP32[DYNAMICTOP_PTR>>2] = 6323696;
 
 
 
@@ -672,7 +672,7 @@ var memoryInitializer = null;
 // === Body ===
 
 var ASM_CONSTS = {
-  67525: function() {debugger;}
+  67517: function() {debugger;}
 };
 
 function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
@@ -682,7 +682,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
 
 
 
-// STATICTOP = STATIC_BASE + 1081920;
+// STATICTOP = STATIC_BASE + 1079792;
 
 
 
@@ -843,7 +843,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   ;
 
   function _emscripten_get_sbrk_ptr() {
-      return 1082768;
+      return 1080640;
     }
 
   
@@ -4428,7 +4428,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   }
   
   
-  var _fetch_work_queue=1082928;function __emscripten_get_fetch_work_queue() {
+  var _fetch_work_queue=1080800;function __emscripten_get_fetch_work_queue() {
       return _fetch_work_queue;
     }function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
     if (typeof noExitRuntime !== 'undefined') noExitRuntime = true; // If we are the main Emscripten runtime, we should not be closing down.
