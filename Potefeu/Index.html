@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<title>🐰POTEFEU🐰</title>
+<meta name="twitter:card" content="player">
+<meta name="twitter:title" content="🐰">
+<meta name="twitter:image" content="https://green224.github.io/mc/PTF/pl_card.png">
+<meta name="twitter:player" content="https://green224.github.io/mc/PTF/Index.html">
+<meta name="twitter:player:height" content="350">
+<meta name="twitter:player:width" content="350">
+<style>
+.loader_spinner {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+  font-size: 25px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  text-indent: -9999em;
+  -webkit-animation: load5 1.1s infinite ease;
+  animation: load5 1.1s infinite ease;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+@-webkit-keyframes load5 {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #e8e8e8, 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.5), -1.8em -1.8em 0 0em rgba(232,232,232, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.7), 1.8em -1.8em 0 0em #e8e8e8, 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.5), 1.8em -1.8em 0 0em rgba(232,232,232, 0.7), 2.5em 0em 0 0em #e8e8e8, 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.5), 2.5em 0em 0 0em rgba(232,232,232, 0.7), 1.75em 1.75em 0 0em #e8e8e8, 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.5), 1.75em 1.75em 0 0em rgba(232,232,232, 0.7), 0em 2.5em 0 0em #e8e8e8, -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.5), 0em 2.5em 0 0em rgba(232,232,232, 0.7), -1.8em 1.8em 0 0em #e8e8e8, -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.5), -1.8em 1.8em 0 0em rgba(232,232,232, 0.7), -2.6em 0em 0 0em #e8e8e8, -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.5), -2.6em 0em 0 0em rgba(232,232,232, 0.7), -1.8em -1.8em 0 0em #e8e8e8;
+  }
+}
+@keyframes load5 {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #e8e8e8, 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.5), -1.8em -1.8em 0 0em rgba(232,232,232, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.7), 1.8em -1.8em 0 0em #e8e8e8, 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.5), 1.8em -1.8em 0 0em rgba(232,232,232, 0.7), 2.5em 0em 0 0em #e8e8e8, 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.5), 2.5em 0em 0 0em rgba(232,232,232, 0.7), 1.75em 1.75em 0 0em #e8e8e8, 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.5), 1.75em 1.75em 0 0em rgba(232,232,232, 0.7), 0em 2.5em 0 0em #e8e8e8, -1.8em 1.8em 0 0em rgba(232,232,232, 0.2), -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.5), 0em 2.5em 0 0em rgba(232,232,232, 0.7), -1.8em 1.8em 0 0em #e8e8e8, -2.6em 0em 0 0em rgba(232,232,232, 0.2), -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.5), -1.8em 1.8em 0 0em rgba(232,232,232, 0.7), -2.6em 0em 0 0em #e8e8e8, -1.8em -1.8em 0 0em rgba(232,232,232, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(232,232,232, 0.2), 1.8em -1.8em 0 0em rgba(232,232,232, 0.2), 2.5em 0em 0 0em rgba(232,232,232, 0.2), 1.75em 1.75em 0 0em rgba(232,232,232, 0.2), 0em 2.5em 0 0em rgba(232,232,232, 0.2), -1.8em 1.8em 0 0em rgba(232,232,232, 0.5), -2.6em 0em 0 0em rgba(232,232,232, 0.7), -1.8em -1.8em 0 0em #e8e8e8;
+  }
+}
+</style>
+</head>
+<div id="waitForManagedDebugger" style="display:none">
+	<h1 style="text-align:center;">
+		<div id="waitForManagedDebuggerMessage"></div>
+		<button onclick="doneWaitingForDebugger()">Continue</button>
+	</h1>
+</div>
+<body style="margin:0px; border:none; overflow:hidden; display:block; background:#2e8676;">
+<div class="loader_spinner">Loading...</div>
+<div id="error_log"></div>
+<canvas id="UT_CANVAS" tabindex="1" style='display:block; touch-action:none;'></canvas>
+<script>
+  var Module = {
+};
+
+
+// The action to perform when a fatal error occurs that cannot be recovered from. Override this function
+// in your own shell file to take a different action. Default behavior is to show a red error ribbon
+// at the top of the page.
+function fatal(msg) {
+	// Emscripten runtime throws a string "unwind" to unwind out from a nested Wasm callstack to yield execution back to the browser
+	if (msg.indexOf("unwind") != -1)
+		return;
+	fatal.count = (fatal.count|0)+1;
+	if (fatal.count < 20) { // Cap the number of errors that are printed to prevent an infinite cascade if there is an error each frame.
+		document.querySelector('#error_log').innerHTML += "<div style='background-color:red; border: 2px solid yellow; padding: 5px; font-weight: bold; font-size: 2em '>" + msg + '</div>';
+	}
+}
+
+// The action to perform when a runtime browser warning occurs. Override this function in your own shell file
+// to customize the behavior. Default behavior is to show a yellow warning ribbon at the top of the page
+// that disappears after a while.
+function warn(msg) {
+	warn.count = (warn.count|0)+1;
+	if (warn.count < 3) { // Cap the number of simultaneous warnings.
+		var div = document.createElement('div');
+		div.innerHTML = "<div style='background-color:yellow; border: 2px solid black; padding: 5px; font-weight: bold; font-size: 2em;'>" + msg + ' <span style="cursor: pointer">[X]</span></div>';
+		function removeWarning() { if (div.parentNode) div.parentNode.removeChild(div); }
+		document.querySelector('#error_log').appendChild(div);
+		div.querySelector('span').onclick = removeWarning;
+		setTimeout(removeWarning, 20000);
+	}
+}
+
+// By default, uncaught global errors are routed to fatal error handler. Override these in your own
+// shell file to take a different action.
+window.onerror = function(message, source, lineno, colno) {
+	var msg = source;
+	if (lineno) msg += ':' + lineno;
+	if (colno) msg += ':' + colno;
+	msg += (msg ? ':':'') + message;
+	fatal(msg);
+}
+
+function doneWaitingForDebugger() {
+  document.getElementById("waitForManagedDebugger").style.display = "none";
+}
+
+// Register a callback function that will be called when the given event occurs.
+// The input system will invoke callbacks for the input events like keydown, keyup.
+var TinyEventManager = {
+	listeners: {},
+
+	addEventListener: function(type, callback) {
+		this.listeners[type] = this.listeners[type] || [];
+		if (this.listeners[type].indexOf(callback) == -1) {
+			this.listeners[type].push(callback);
+		}
+	},
+
+	removeEventListener: function(type, callback) {
+		if (this.listeners[type]) {
+			var index = this.listeners[type].indexOf(callback);
+			if (index != -1) {
+				this.listeners[type].splice(index, 1);
+			}
+		}
+	},
+
+	dispatchEvent: function(event) {
+		if (this.listeners[event.type]) {
+			this.listeners[event.type].forEach((callback) => callback(event));
+		}
+	}
+};
+
+
+// Example action: do not navigate the browser page on space bar key presses.
+function keyEvent(ev) {
+	if (document.activeElement == document.querySelector('#UT_CANVAS') && ev.key == ' ') {
+		ev.preventDefault();
+	}
+}
+TinyEventManager.addEventListener('keydown', keyEvent);
+TinyEventManager.addEventListener('keyup', keyEvent);
+
+// Depending on the build flags that one uses, different files need to be downloaded
+// to load the compiled page. The right set of files will be expanded to be downloaded
+// via the directive below.
+
+  function binary(url) { // Downloads a binary file and outputs it in the specified callback
+      return new Promise((ok, err) => {
+        var x = new XMLHttpRequest();
+        x.open('GET', url, true);
+        x.responseType = 'arraybuffer';
+        x.onload = () => { ok(x.response); }
+        x.send(null);
+      });
+    }
+  
+  function script(url) { // Downloads a script file and adds it to DOM
+    return new Promise((ok, err) => {
+      var s = document.createElement('script');
+      s.src = url;
+      s.onload = () => {
+        ok();
+      };
+      document.body.appendChild(s);
+    });
+  }
+  Promise.all([binary('App.js'), binary('App.wasm')]).then((r) => {
+  Module.wasm = r[1];
+  var url = URL.createObjectURL(new Blob([r[0]], { type: 'application/javascript' }));
+  script(url).then(() => { URL.revokeObjectURL(url) });
+});
+
+
+</script>
+</body>
+</html>
+
+
