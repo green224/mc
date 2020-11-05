@@ -5720,8 +5720,8 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
               self.pcStateConnected = true;
               self.pcStateConnecting = false;
               
-              var loderSpnner = document.getElementsByClassName("loader_spinner")[0];
-              loderSpnner.parentNode.removeChild(loderSpnner);
+//              var loderSpnner = document.getElementsByClassName("loader_spinner")[0];
+//              loderSpnner.parentNode.removeChild(loderSpnner);
           };
           
           this.ws.onmessage = function(e) {
