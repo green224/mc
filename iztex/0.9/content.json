@@ -4,9 +4,9 @@
 	"PageMap": [
 		["home", {}],
 		["tutorial", {}],
-		["views", {}],
-		["toolbar", {}],
 		["menubar", {}],
+		["views", {}],
+		["dialogs", {}],
 		["uvHint", {}],
 		["updateLog", {}]
 	]

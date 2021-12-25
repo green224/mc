@@ -7,7 +7,8 @@
 	["PageTitle_home", "Home"],
 	["PageTitle_tutorial", "Getting Started"],
 	["PageTitle_views", "Views"],
-	["PageTitle_toolbar", "Toolbar"],
+	["PageTitle_dialogs", "Dialogs"],
 	["PageTitle_menubar", "Menu Bar"],
-	["PageTitle_uvHint", "How to make UV"]
+	["PageTitle_uvHint", "How to make UV"],
+	["PageTitle_updateLog", "Update Log"]
 ]
