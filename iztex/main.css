@@ -17,3 +17,7 @@ body {
 	overflow-wrap: break-word;
 	color: #464646;
 }
+
+.hidden {
+	visibility: hidden !important;
+}

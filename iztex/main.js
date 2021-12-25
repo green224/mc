@@ -100,10 +100,12 @@ var Loader = {
 			}
 		});
 	},
-	async reloadLocalize(locMode) {
-		await this.loadLocalize(locMode);
+	async reloadLocalize(lang) {
+		this._beginLoad();
+		await this.loadLocalize(lang);
 		await this.loadBody(this._pagename);
 		await this.rebuildLeftMenu();
+		this._endLoad();
 	},
 
 	// 本体部分を読み込む処理
@@ -159,13 +161,13 @@ console(value);
 				retHtml +=
 					'	<a class="ui item" onclick="'
 					+ 'Loader.scrollBody(' + ($(sec).offset().top - 10) + ');">'
-					+ sec.innerText
+					+ sec.innerHTML
 					+ '</a>';
 			} );
 			return retHtml;
 		};
 
-		// ページ一覧を更新
+		// ページ一覧のタイトルを作成
 		let menuItemsHtml = "";
 		let pageArray = [];
 		for (let [key, value] of this._pageMap) {
@@ -183,24 +185,25 @@ console(value);
 			menuItemsHtml +=
 				'</div>';
 		}
+
+		// ページタイトル押下時の処理を設定
 		const leftMenuItems = $("#leftMenuItems");
 		leftMenuItems[0].innerHTML = menuItemsHtml;
 		leftMenuItems.find(".leftMenuTitle").each( (idx,a) => {
 			a.onclick = () => {
+				this._beginLoad();
 				const pagename = pageArray[idx].key;
 				if (this._pagename == pagename) return;
 				Loader.loadBody( pagename ).then( () => {
 					QueryParam.set('page', pagename);
-
-					leftMenuItems.find(".leftMenuContent")[idx].innerHTML =
-						genSectionsHTMl();
-
-					leftMenuItems
-						.accordion('refresh')
-						.accordion('open', idx);
+					leftMenuItems.find(".leftMenuContent")[idx].innerHTML = genSectionsHTMl();
+					leftMenuItems.accordion('refresh').accordion('open', idx);
+					this._endLoad();
 				} );
 			};
 		} );
+
+		// ページ一覧のAccordionを初期化
 		leftMenuItems
 			.accordion({
 				selector: {
@@ -209,8 +212,12 @@ console(value);
 			});
 	},
 	async reloadVersion(version) {
+		this._beginLoad();
 		await this.loadVersion(version);
-		await this.reloadLocalize(this._lang);
+		await this.loadLocalize(this._lang);
+		await this.loadBody(this._pagename);
+		await this.rebuildLeftMenu();
+		this._endLoad();
 	},
 
 	// 何らからのテキストファイルを読み込む処理
@@ -228,5 +235,14 @@ console(value);
 	_localizeData : null,
 	_pageMap: null,
 	_sections: null,
+
+	_beginLoad() {
+		$("#contentBody").addClass("hidden");
+		$("#mainLoaderIcon").addClass("active");
+	},
+	_endLoad() {
+		$("#mainLoaderIcon").removeClass("active");
+		$("#contentBody").removeClass("hidden");
+	},
 };
 

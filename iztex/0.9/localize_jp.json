@@ -9,5 +9,6 @@
 	["PageTitle_views", "View 一覧"],
 	["PageTitle_toolbar", "ツールバー"],
 	["PageTitle_menubar", "メニューバー"],
-	["PageTitle_uvHint", "UVの切り方について"]
+	["PageTitle_uvHint", "UVの切り方について"],
+	["PageTitle_updateLog", "更新履歴"]
 ]
