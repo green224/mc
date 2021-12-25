@@ -126,7 +126,7 @@ var Loader = {
 				offset: $(sec).offset().top,
 			});
 			sec.innerHTML =
-				'<i class="linkify icon" style="font-size: smaller; color: #b0b0b0"></i> '
+				'<i class="paragraph icon" style="color: #aaa"></i> '
 				+ sec.innerHTML;
 		} );
 
@@ -209,9 +209,9 @@ console(value);
 		leftMenuItems[0].innerHTML = menuItemsHtml;
 		leftMenuItems.find(".leftMenuTitle").each( (idx,a) => {
 			a.onclick = () => {
-				this._beginLoad();
 				const pagename = pageArray[idx].key;
 				if (this._pagename == pagename) return;
+				this._beginLoad();
 				Loader.loadBody( pagename ).then( () => {
 					QueryParam.set('page', pagename);
 					leftMenuItems.find(".leftMenuContent")[idx].innerHTML = genSectionsHTMl();
