@@ -14,6 +14,7 @@
 * ファイルドラッグ＆ドロップ時に、読み込み可能表示を出す
 * 言語切り替えを可能にする
 * ショートカット編集ウィンドウの追加
+* Mac版の作成
 
 <div class="ui compact message">
 	<i class="exclamation circle icon"></i>
