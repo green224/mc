@@ -116,10 +116,28 @@ var Loader = {
 		const data = await this.loadFileText(this._version+"/bodies/"+pagename+"_"+this._lang+".md");
 		const contentBody = $("#contentBody");
 		contentBody[0].innerHTML = marked.parse(data);
-		this._sections = contentBody.find("h2");
+
+		// 見出し部分の情報をキャッシュして、見出しの表示も整える
+		const rawSections = contentBody.find("h1");
+		this._sections = [];
+		rawSections.each( (idx, sec) => {
+			this._sections.push({
+				name: sec.innerHTML,
+				offset: $(sec).offset().top,
+			});
+			sec.innerHTML =
+				'<i class="linkify icon" style="font-size: smaller; color: #b0b0b0"></i> '
+				+ sec.innerHTML;
+		} );
 
 		// ヘッダーのページ名の更新
-		$("#headerPageName")[0].innerHTML = this._localizeData.get("PageTitle_" + pagename);
+		const pagenameText = this._localizeData.get("PageTitle_" + pagename);
+		$("#headerPageName")[0].innerHTML = pagenameText;
+		contentBody[0].innerHTML =
+			"<h1>" + pagenameText + "</h1>"
+			+ "<hr>"
+			+ contentBody[0].innerHTML;
+
 	},
 	scrollBody(ofs) {
 //		const ofs = $('span[id="section_' + sectionName + '"]').offset().top - 10;
@@ -157,11 +175,11 @@ console(value);
 		// 選択セクション一覧のHTMLを生成する処理
 		const genSectionsHTMl = () => {
 			let retHtml = "";
-			this._sections.each( (idx,sec) => {
+			this._sections.forEach( sec => {
 				retHtml +=
 					'	<a class="ui item" onclick="'
-					+ 'Loader.scrollBody(' + ($(sec).offset().top - 10) + ');">'
-					+ sec.innerHTML
+					+ 'Loader.scrollBody(' + sec.offset + ');">'
+					+ sec.name
 					+ '</a>';
 			} );
 			return retHtml;
