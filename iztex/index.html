@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+	<style>
+		.sidebar {
+			transition-duration: 0.27s !important;
+		}
+		.pusher {
+			transition-duration: 0.27s !important;
+		}
+	</style>
+</head>
+<body>
+
+<!-- Left Menu -->
+<div class="ui left sidebar inverted vertical menu">
+
+	<!-- Header -->
+	<div class="item">
+		<div class="content" style="text-align: center;">
+			<span class="ui inverted header" id="leftMenuHeader_ProductName"></span>
+			<span style="margin-left: 6px;"></span>
+			<div class="ui inline top right pointing dropdown" id="leftMenuHeader_Version">
+			</div>
+			<div class="sub header">
+				<span id="leftMenuHeader_SubHeader"></span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Page List -->
+	<div class="ui accordion" id="leftMenuItems"></div>
+
+</div>
+
+<!-- Content Area -->
+<div class="pusher">
+
+	<!-- Header Bar -->
+	<div class="ui fixed inverted main menu">
+		<a class="launch icon item"><i class="content icon"></i></a>
+		<div class="item" id="headerPageName"></div>
+		<div class="right menu">
+			<div class="ui borderless item inverted dropdown" id="headerLocalize">
+			</div>
+		</div>
+	</div>
+
+	<!-- Document Body -->
+	<div class="contentWrapper">
+		<div style="padding-top: 6em"></div>
+		<div class="ui container" id="contentBody"></div>
+		<div style="padding-top: 8em"></div>
+	</div>
+
+	<!-- Footer -->
+	<div class="ui inverted vertical small footer segment">
+		<div class="ui center aligned container" id="footer">
+			Copyright © 2021 Olyester
+		</div>
+	</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="main.js"></script>
+<script>
+	$('.launch').click(()=>{
+		$('.ui.sidebar')
+//			.sidebar('setting', 'transition', 'overlay')
+			.sidebar('setting', 'transition', 'push')
+			.sidebar('toggle');
+	});
+	$('.accordion').accordion({
+		onOpening: function () {
+			console.log(this.index('.content'));
+		}
+	});
+
+	Loader.setup();
+</script>
+
+</body>
+</html>

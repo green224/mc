@@ -1,0 +1,13 @@
+[
+	["LocalizeTitle_en", "English"],
+	["LocalizeTitle_jp", "Japanese"],
+
+	["LeftMenu_SubHeader", "目次"],
+
+	["PageTitle_home", "はじめに"],
+	["PageTitle_tutorial", "チュートリアル"],
+	["PageTitle_views", "View 一覧"],
+	["PageTitle_toolbar", "ツールバー"],
+	["PageTitle_menubar", "メニューバー"],
+	["PageTitle_uvHint", "UVの切り方について"]
+]

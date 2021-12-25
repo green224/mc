@@ -1,0 +1,12 @@
+{
+	"VersionName": "0.9(b)",
+	"LocalizeList": ["en", "jp"],
+	"PageMap": [
+		["home", {}],
+		["tutorial", {}],
+		["views", {}],
+		["toolbar", {}],
+		["menubar", {}],
+		["uvHint", {}]
+	]
+}
