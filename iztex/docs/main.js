@@ -139,9 +139,9 @@ var Loader = {
 		} );
 
 		// ヘッダーのページ名の更新
+		const pagenameText = this._localizeData.get("PageTitle_" + pagename);
+		$("#headerPageName")[0].innerHTML = pagenameText;
 		if ( !this._pageMap.get(pagename).hasOwnProperty("hideTitle") ) {
-			const pagenameText = this._localizeData.get("PageTitle_" + pagename);
-			$("#headerPageName")[0].innerHTML = pagenameText;
 			contentBody[0].innerHTML =
 				"<h1>" + pagenameText + "</h1>"
 				+ "<hr>"
