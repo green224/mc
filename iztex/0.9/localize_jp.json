@@ -10,5 +10,6 @@
 	["PageTitle_dialogs", "ダイアログ 一覧"],
 	["PageTitle_menubar", "メニューバー"],
 	["PageTitle_uvHint", "UVの切り方について"],
-	["PageTitle_updateLog", "更新履歴"]
+	["PageTitle_updateLog", "更新履歴"],
+	["PageTitle_faq", "FAQ"]
 ]

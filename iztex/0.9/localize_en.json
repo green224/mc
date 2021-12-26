@@ -10,5 +10,6 @@
 	["PageTitle_dialogs", "Dialogs"],
 	["PageTitle_menubar", "Menu Bar"],
 	["PageTitle_uvHint", "How to make UV"],
-	["PageTitle_updateLog", "Update Log"]
+	["PageTitle_updateLog", "Update Log"],
+	["PageTitle_faq", "FAQ"]
 ]

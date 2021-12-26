@@ -8,6 +8,7 @@
 		["views", {}],
 		["dialogs", {}],
 		["uvHint", {}],
+		["faq", {}],
 		["updateLog", {}]
 	]
 }

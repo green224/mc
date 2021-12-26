@@ -15,6 +15,7 @@
 * 言語切り替えを可能にする
 * ショートカット編集ウィンドウの追加
 * Mac版の作成
+* 自動バックアップ機能の作成
 
 <div class="ui compact message">
 	<i class="exclamation circle icon"></i>
