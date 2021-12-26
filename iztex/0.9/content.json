@@ -2,7 +2,7 @@
 	"VersionName": "0.9(b)",
 	"LocalizeList": ["en", "jp"],
 	"PageMap": [
-		["home", {}],
+		["home", {"hideTitle":true}],
 		["tutorial", {}],
 		["menubar", {}],
 		["views", {}],

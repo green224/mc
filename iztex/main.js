@@ -73,7 +73,15 @@ var Loader = {
 		// ローカライズデータを読み込み
 		const locLst = this._contentData.LocalizeList;
 		if ( locLst.find(i=>i===lang) === undefined ) {
-			lang = locLst[0];
+			// ブラウザのデフォルト言語を見て、初期値を決める
+			var languageStr = (window.navigator.languages && window.navigator.languages[0]) ||
+				window.navigator.language ||
+				window.navigator.userLanguage ||
+				window.navigator.browserLanguage;
+			lang = languageStr == "ja" ? "jp" : "en";
+
+			if ( locLst.find(i=>i===lang) === undefined )
+				lang = locLst[0];
 		}
 		this._lang = lang;
 
@@ -131,13 +139,14 @@ var Loader = {
 		} );
 
 		// ヘッダーのページ名の更新
-		const pagenameText = this._localizeData.get("PageTitle_" + pagename);
-		$("#headerPageName")[0].innerHTML = pagenameText;
-		contentBody[0].innerHTML =
-			"<h1>" + pagenameText + "</h1>"
-			+ "<hr>"
-			+ contentBody[0].innerHTML;
-
+		if ( !this._pageMap.get(pagename).hasOwnProperty("hideTitle") ) {
+			const pagenameText = this._localizeData.get("PageTitle_" + pagename);
+			$("#headerPageName")[0].innerHTML = pagenameText;
+			contentBody[0].innerHTML =
+				"<h1>" + pagenameText + "</h1>"
+				+ "<hr>"
+				+ contentBody[0].innerHTML;
+		}
 	},
 	scrollBody(ofs) {
 //		const ofs = $('span[id="section_' + sectionName + '"]').offset().top - 10;
