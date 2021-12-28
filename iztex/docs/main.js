@@ -31,7 +31,11 @@ var Loader = {
 		this._rootData = rootData;
 
 		// フッターの初期化
-		$("#footer")[0].innerHTML = "Copyright © 2021 " + rootData.author;
+		$("#footer")[0].innerHTML =
+			"Copyright © 2021 " + rootData.author
+			+ '<a href="https://twitter.com/cco00oo" target="_blank" style="margin-left: 3px;">'
+			+	'<i class="twitter icon" style="color: #ddd;"></i>'
+			+ '</a>';
 
 		// バージョンを読み込み
 		if ( rootData.versions.find(i=>i===version) === undefined ) {
