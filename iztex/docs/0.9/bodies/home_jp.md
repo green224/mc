@@ -47,19 +47,66 @@ IZTEXではこのような陰影を簡単に、綺麗に作成でき、また何
 
 # 使ってみる
 
-IZTEXはブラウザ版とExe版があります。全機能が使用できますがブラウザ版はフリーウェアです。
-
-<div class="ui compact message">
-	IZTEX ブラウザ版
+<style>
+.appBtn a {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	margin: 0 !important;
+	font-size: 18px !important;
+	height: 200px;
+}
+.appBtn a:hover {
+	text-decoration: none;
+	background-color: #bbbbbb;
+}
+.appBtn {
+	display: flex;
+	flex-direction: row;
+	margin: 40px 40px;
+	position: relative;
+}
+.appBtn .appColumn {
+	width: 50%;
+}
+.appBtn .ui.vertical.divider::after, .appBtn .ui.vertical.divider::before {
+	border-left-color: #f3f3f3;
+}
+.appBtn div {
+	color: #f3f3f3 !important;
+	opacity: 1 !important;
+}
+</style>
+<div class="appBtn">
+	<div class="ui vertical divider">Or</div>
+	<div class="appColumn">
+		<a class="ui blue button" style="border-radius: 20px 0 0 20px;" href="../" target="_blank">
+			<div class="ui icon header" style="height: auto;">
+				<i class="world icon"></i>
+				ブラウザ版
+			</div>
+		</a>
+	</div>
+	<div class="appColumn">
+		<a class="ui blue button" style="border-radius: 0 20px 20px 0;">
+			<div class="ui icon header" style="height: auto;">
+				<i class="download icon"></i>
+				Exe版
+			</div>
+		</a>
+	</div>
 </div>
+
+
+ブラウザ版とExe版があります。全機能が使用できますがブラウザ版はフリーウェアです。
 
 TODO : Exe版の配布ページを作る
 
-※ ブラウザ版はWebGLの仕様的制約上、いくつかの機能に相違があります
+※ ブラウザ版はWebGLの制約上、いくつかの機能に相違があります
 
 |    |  相違点  |
 | :----: | ---- |
-|  保存機能  |  ブラウザの設定により、ファイル名変更ダイアログが出ない場合がある（FAQ参照）  |
+|  保存機能  |  ブラウザ設定により、ファイル名変更ダイアログが出ない場合がある（FAQ参照）  |
 |  カーソル挙動  |  G/R/SキーでのTransform変更時に、カーソルがループしない  |
 |  IME  |  機能しない（修正予定）  |
 |  コピー＆ペースト  |  使用できるが、クリップボードとは同期しない  |
