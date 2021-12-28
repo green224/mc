@@ -6,6 +6,7 @@
 		["tutorial", {}],
 		["menubar", {}],
 		["views", {}],
+		["props", {}],
 		["dialogs", {}],
 		["uvHint", {}],
 		["faq", {}],

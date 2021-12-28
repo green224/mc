@@ -21,3 +21,22 @@ body {
 .hidden {
 	visibility: hidden !important;
 }
+
+
+.contentWrapper table, .contentWrapper th, .contentWrapper td {
+	border-width: 1px;
+	border-radius: 6px;
+	border-color: #aaa;
+	border-spacing: 3px 2px;
+}
+.contentWrapper td, .contentWrapper th {
+	border-width: 1px;
+	border-color: #bbb;
+	padding: 5px 13px;
+}
+.contentWrapper th, .contentWrapper td:nth-of-type(1) {
+	background-color: #ccc;
+}
+.contentWrapper td {
+	background-color: #e0e0e0;
+}
