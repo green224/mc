@@ -125,9 +125,11 @@ var Loader = {
 		this._pagename = pagename;
 
 		// 本体部分を更新
-		const data = await this.loadFileText(this._version+"/bodies/"+pagename+"_"+this._lang+".md");
+		let data = await this.loadFileText(this._version+"/bodies/"+pagename+"_"+this._lang+".md");
+		data = marked.parse(data);
+		data = data.split('<img src="').join('<img src="'+this._version+'/');
 		const contentBody = $("#contentBody");
-		contentBody[0].innerHTML = marked.parse(data);
+		contentBody[0].innerHTML = data;
 
 		// 見出し部分の情報をキャッシュして、見出しの表示も整える
 		const rawSections = contentBody.find("h1");
@@ -147,8 +149,7 @@ var Loader = {
 		$("#headerPageName")[0].innerHTML = pagenameText;
 		if ( !this._pageMap.get(pagename).hasOwnProperty("hideTitle") ) {
 			contentBody[0].innerHTML =
-				"<h1>" + pagenameText + "</h1>"
-				+ "<hr>"
+				'<h1 style="font-size: 2.4rem; padding-bottom: 12px;">' + pagenameText + "</h1>"
 				+ contentBody[0].innerHTML;
 		}
 	},
