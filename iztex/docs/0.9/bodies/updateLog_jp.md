@@ -37,7 +37,22 @@
 # 更新履歴
 
 <details>
-<summary>0.92(b)</summary>
+<summary>22/01/04 : 0.93(b)</summary>
+不具合修正
+<ol>
+<li>ボーンありモデルを使用した場合に、正常に保存されない不具合を修正</li>
+</ol>
+新規機能
+<ol>
+<li>複数マテリアルを持つモデルを使用できるように</li>
+<li>RenderViewに選択マテリアルの切り替え機能を追加</li>
+<li>FBX読み込みを非同期に変更（exe版のみ）</li>
+<li>FBX読み込み時にプログレスバーを表示</li>
+</ol>
+</details>
+
+<details>
+<summary>22/01/02 : 0.92(b)</summary>
 <ol>
 <li>ベータ版公開</li>
 </ol>
