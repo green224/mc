@@ -6,6 +6,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet"> 
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
 	<title>GAMES</title>
 	<style>
 		body {
@@ -46,24 +47,15 @@
 	</style>
 </head>
 <body>
-	<div class="elemsRoot">
-		<div class="elemBox">
-			<div class="detailTextArea">
-				<div style="margin:4px; font-weight: bold; font-size: large;">☆　アトラスの塔　☆</div>
-				ランダムに生成されるダンジョンを 仲間を召喚しながら攻略する<br>
-				3Dローグライト アクションゲーム。<br>
-				強敵と戦い 最上階を目指そう！
-			</div>
-			<div style="width: 100%; text-align: right;">
-				<a class="downloadLink" href="https://drive.google.com/uc?id=1jKN_LNdDYTjNIf10l26Z6-86st9TC0ER">
-					ダウンロード
-				</a>
-				<div style="font-size: smaller;">
-					更新日：2022/08/20　Ver.3.1.1
-				</div>
-			</div>
-			<div class="mainSSCtnr"><img class="mainSS" src="toa_ss.png"></div>
-		</div>
+
+	<div class="elemsRoot" id="elemsRoot">
 	</div>
+
+	<script src="main.js"></script>
+	<script>
+		Loader.setup().then(()=>{
+		});
+	</script>
+
 </body>
 </html>
