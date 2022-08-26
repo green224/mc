@@ -6,6 +6,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
 	<title>GAMES</title>
 	<style>
@@ -16,9 +17,16 @@
 			font-size: 14px;
 		}
 		.header {
+			margin: 14px 0 -8px;
 			display: flex;
 			width: 100%;
 			font-size: 11px;
+		}
+		.footer {
+			margin: -8px 0 14px;
+			font-size: 11px;
+			text-align: center;
+			font-weight: bold;
 		}
 		.elemsRoot {
 			display: flex;
@@ -69,7 +77,7 @@
 <body>
 
 	<div class="header">
-		<div id="langSwitch" style="width: 100%; text-align: right; margin-right: 10px;">
+		<div id="langSwitch" style="width: 100%; text-align: right; margin-right: 24px;">
 		</div>
 	</div>
 
@@ -81,6 +89,11 @@
 		Loader.setup().then(()=>{
 		});
 	</script>
+
+	<div class="footer">
+		Copyright © Olyester
+		<a href="https://twitter.com/cco00oo" style="margin-left: 0px; text-decoration: none;"><i class="twitter icon" style="color: #ddd;"></i></a>
+	</div>
 
 </body>
 </html>

@@ -25,7 +25,6 @@ var Loader = {
 
 		// 言語設定
 		let lang = QueryParam.get("lang");
-console.log(lang);
 		if ( lang == undefined ) {
 			// ブラウザのデフォルト言語を見て、初期値を決める
 			var languageStr = (window.navigator.languages && window.navigator.languages[0]) ||
@@ -74,7 +73,9 @@ console.log(lang);
 					'<div style="width: 100%; display: flex; align-items: stretch;">' +
 						'<div style="width: 50%; text-align: left; display: flex; align-items: flex-end; font-size: smaller;">' +
 							(lang=="jp" ? "プラットフォーム" : "Platform") + '：' + page.platform + '　' +
-							(lang=="jp" ? "プレイ時間" : "Game Time") + '：' + page.game_time +
+							( page.game_time == "" ? "" : (
+								(lang=="jp" ? "プレイ時間" : "Game Time") + '：' + page.game_time
+							) )+
 						'</div>' +
 						'<div style="width: 50%; text-align: right;">' +
 							(locData.dl_url=="" ? (
