@@ -1,5 +1,6 @@
 {
 	"name": "アトラスの塔",
-	"desc": "ランダムに生成されるダンジョンを 仲間を召喚しながら攻略する<br>3Dローグライト アクションゲーム。<br>強敵と戦い 最上階を目指そう！",
-	"dl_url": "https://drive.google.com/uc?id=1jKN_LNdDYTjNIf10l26Z6-86st9TC0ER"
+	"desc": "ランダムに生成されるダンジョンを 仲間を召喚しながら攻略する<br>3Dローグライト アクションゲーム<br>強敵と戦い 最上階を目指そう！",
+	"dl_url": "https://drive.google.com/uc?id=1jKN_LNdDYTjNIf10l26Z6-86st9TC0ER",
+	"dl_type": "download"
 }

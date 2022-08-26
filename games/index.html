@@ -15,22 +15,35 @@
 			font-family: 'Kiwi Maru', serif;
 			font-size: 14px;
 		}
+		.header {
+			display: flex;
+			width: 100%;
+			font-size: 11px;
+		}
 		.elemsRoot {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin: 50px 5vw;
+			margin: 25px 5vw;
 		}
 		.elemBox {
-			height: 400px;
 			width: 700px;
-			margin: 0 auto;
+			margin: 20px 0;
+		}
+		.divLine {
+			width: 800px;
+			height: 0px;
+			border-bottom: 1px dashed rgba(134, 134, 134, 0.9);
 		}
 		.detailTextArea {
-			margin: 5px 0 -10px 0;
+			margin: 5px 0 10px 0;
 			text-align: center;
 		}
-		.mainSS {
+		img .mainSS {
+			margin: 0 auto;
+			border: 1px #000 solid;
+		}
+		video .mainSS {
 			margin: 0 auto;
 			border: 1px #000 solid;
 		}
@@ -38,15 +51,27 @@
 			margin: 15px;
 			text-align: center;
 		}
-		.downloadLink {
+		a {
 			font-weight: bold;
-			font-size: large;
 			text-decoration: underline;
 			color: rgba(202, 202, 202, 0.9);
+		}
+		.downloadLink {
+			font-size: large;
+			color: rgba(202, 202, 202, 0.9);
+		}
+		.downloadLinkClosed {
+			font-size: large;
+			color: rgba(114, 114, 114, 0.9);
 		}
 	</style>
 </head>
 <body>
+
+	<div class="header">
+		<div id="langSwitch" style="width: 100%; text-align: right; margin-right: 10px;">
+		</div>
+	</div>
 
 	<div class="elemsRoot" id="elemsRoot">
 	</div>
