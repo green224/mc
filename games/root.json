@@ -2,7 +2,9 @@
 	"pages": [
 		{
 			"id": "toa",
-			"date": "2022/08/23　Ver.3.2.0",
+			"date": "2022/08/26　Ver.3.2.1",
+			"platform": "Windows PC",
+			"gameTime": "10～15 H",
 			"ss": "toa_ss.png"
 		}
 	]

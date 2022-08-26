@@ -53,12 +53,18 @@ console.log(lang);
 						'</div>' +
 						locData.desc +
 					'</div>' +
-					'<div style="width: 100%; text-align: right;">' +
-						'<a class="downloadLink" href="'+locData.dl_url+'">' +
-							(lang=="jp" ? "ダウンロード" : "DOWNLOAD") +
-						'</a>' +
-						'<div style="font-size: smaller;">' +
-							(lang=="jp" ? "更新日" : "Update Date") + '：' + page.date +
+					'<div style="width: 100%; display: flex; align-items: stretch;">' +
+						'<div style="width: 50%; text-align: left; display: flex; align-items: flex-end; font-size: smaller;">' +
+							(lang=="jp" ? "プラットフォーム" : "Platform") + '：' + page.platform + '　' +
+							(lang=="jp" ? "プレイ時間" : "Game Time") + '：' + page.gameTime +
+						'</div>' +
+						'<div style="width: 50%; text-align: right;">' +
+							'<a class="downloadLink" href="'+locData.dl_url+'">' +
+								(lang=="jp" ? "ダウンロード" : "DOWNLOAD") +
+							'</a>' +
+							'<div style="font-size: smaller;">' +
+								(lang=="jp" ? "更新日" : "Update Date") + '：' + page.date +
+							'</div>' +
 						'</div>' +
 					'</div>' +
 					'<div class="mainSSCtnr"><img class="mainSS" src="'+page.ss+'"></div>' +
